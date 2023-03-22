@@ -6,7 +6,7 @@ export async function generateStaticParams() {
     )
     const res = await data.json()
 
-    return res.results.map((movie) => ({
+    return res.results?.map((movie) => ({
         movie: toString(movie.id),
     }))
 }

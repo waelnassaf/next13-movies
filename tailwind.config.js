@@ -17,6 +17,6 @@ module.exports = {
                 montserrat: ["var(--font-montserrat)"],
             },
         },
-    },
+},  
     plugins: [],
 }

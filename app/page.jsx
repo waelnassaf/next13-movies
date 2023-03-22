@@ -4,10 +4,12 @@ export default async function Home() {
     const data = await fetch(
         `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.API_KEY}`
     )
+
     const res = await data.json()
+
     return (
         <main>
-            <div className="grid grid-cols-fluid gap-16 p-7 text-center">
+            <div className="grid grid-cols-fluid gap-16 my-7 text-center">
                 {res.results.map((movie) => (
                     <Movie
                         key={movie.id}
